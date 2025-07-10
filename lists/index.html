@@ -9,39 +9,48 @@
     <body>
         <h1>My Lists</h1>
 
+        <!-- The only element we can place as a direct child of the <ul> and <ol> elements is the <li> element. -->
+            <!-- Very important for nested lists -->
+        
         <h2>Shopping list</h2>
         <ul>
             <li>Avocado</li>
             <li>Potato</li>
             <li>Salad</li>
-            <li><i>Sparkling</i> water</li>
+            <li>
+                <i>Sparkling</i> water <!-- Look, the closing </li> tag is not placed here! -->
                 <ol>
                     <p>In order of preference:</p>
                     <li>Saint Spring</li>
                     <li>Bonaqua</li>
                 </ol>
+            </li> <!-- Here is the closing </li> tag -->
             <li>Chocolate</li>
         </ul>
 
         <h2>TODO list</h2>
-        <ol>
-            <li><b>Study</b></li>
+        <ol type="a">
+            <li>
+                <b>Study</b> <!-- Look, the closing </li> tag is not placed here! -->
                 <ol>
                     <li>CS50</li>
                     <li>Odin Project</li>
                 </ol>
+            </li> <!-- Here is the closing </li> tag -->
             <li>Wash dishes</li>
             <li>Buy food</li>
             <li>Shower</li>
         </ol>
 
         <h2>Places I'd like to visit</h2>
-        <ul>
-            <li>Germany</li>
+        <ul type="square">
+            <li>
+                Germany <!-- Look, the closing </li> tag is not placed here! -->
                 <ul>
                     <li>Berlin</li>
                     <li>Cologne</li>
                 </ul>
+            </li> <!-- Here is the closing </li> tag -->
             <li>France</li>
             <li><b>Italy</b></li>
             <li>Great Britain</li>
@@ -49,12 +58,28 @@
         </ul>
 
         <h2>Top 5 video games I've played recently</h2>
-        <ol>
-            <li><b>God of War (2018) and Ragnarok</b></li>
-            <li>Days Gone</li>
+        <ol start="999" reversed>
+            <li>World of Tanks</li>
+            <p>...</p>
+            <li value="5">Hi-fi Rush</li>
             <li>Rollerdrome</li>
             <li>Sifu</li>
-            <li>Hi-fi Rush</li>
+            <li>Days Gone</li>
+            <li><b>God of War (2018) and Ragnarok</b></li>
         </ol>
+
+        <h2>Vocabulary</h2>
+        <dl>
+            <dt>study</dt>
+            <dd>The devotion of time and attention to acquiring knowledge on an academic subject, especially by means of books</dd>
+
+            <dt>design</dt>
+            <dd>A plan or drawing produced to show the look and function or workings of a building, garment, or other object before it is built or made</dd>
+            <dd>Purpose, planning, or intention that exists or is thought to exist behind an action, fact, or material object</dd>
+            
+            <dt>business</dt>
+            <dt>work</dt>
+            <dd>A person's regular occupation, profession, or trade</dd>
+        </dl>
     </body>
 </html>

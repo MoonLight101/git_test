@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Link test</title>
+    </head>
+
+    <body>
+        <h1>Homepage</h1>
+        <!-- While href specifies the destination link, target specifies where the linked resource will be opened. -->
+        <!-- _blank - new tab or window, _self - current tab -->
+        <!-- rel=”noopener”: prevents the new tab from accessing the original page, ensuring security. -->
+        <!-- rel=”noreferrer”: ensures the new page cannot see the referring page’s address (privacy) and prevents it from accessing the original page (security). -->
+        <!-- it is recommended to always pair a target="_blank" with a rel="noopener noreferrer", using both noopener and noreferrer-->
+        <p><a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About the Odin Project</a></p>
+
+        <!-- Absolute links
+         Links to pages on other websites on the internet are called absolute links. 
+         A typical absolute link will be made up of the following parts: scheme://domain/path. 
+         An absolute link will always contain the scheme and domain of the destination. 
+         Link above is an example of an absolute link.-->
+
+        <!-- Relative links
+        Links to other pages within our own website are called relative links. 
+        Relative links do not include the domain name, since it is another page on the same site, 
+        it assumes the domain name will be the same as the page we created the link on. -->
+
+        <!-- Relative link example: -->
+        <!-- By adding ./ you are specifying to your code that it should start looking for the file/directory relative to the current directory. -->
+        <p><a href="./pages/about.html" target="_blank" rel="noopener noreferrer">About</a></p>
+        <p><a href="./pages/page-two.html" target="_blank" rel="noopener noreferrer">Second page</a></p>
+
+        <!-- Image link with relative path-->
+        <!-- To access parent directory use "../" -->
+        <!-- The alt attribute is used to describe an image. 
+         It will be used in place of the image if it cannot be loaded. 
+         It is also used with screen readers to describe what the image is to visually impaired users. -->
+        <!-- It is a good habit to always specify width and height attributes on every image, even when the image is the correct size or you are using CSS to modify it. -->
+        <img src="./img/dog.jpg" alt="Charles The Dog" height="600" width="400">
+
+    </body>
+</html>

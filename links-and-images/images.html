@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Images</title>
+  </head>
+  <body>
+    <h1>Images</h1>
+    <p>This page covers common image formats, but you may also be looking for <a href="./links.html">links</a> and <a href="./misc/extras.html">useful extars</a>.</p>
+    
+    <h2>JPGs</h2>
+    <p>JPG images are good for photos. JPGs don't allow for transparent pixels.</p>
+    <img src="./images/mochi.jpg" height="75" alt="A mochi ball in a bubble">
+
+    <h2>GIFs</h2>
+    <p>GIFs are good for animations.</p>
+    <img src="./images/mochi.gif" height="75" alt="A dancing mochi ball">
+
+    <h2>PNGs</h2>
+    <p>PNGs are good for diagrams and icons. They do deal with opacity just fine, and they don't have color palette limitations.</p>
+    <img src="./images/mochi.png" height="75" alt="A mochi ball">
+
+    <h2>SVGs</h2>
+    <p>SVGs are <em>amazing</em>. Use them whenever you can. SVG is a vector-based graphics format, meaning it can scale up or down to any dimension without loss of quality.</p>
+    <p>But their file size may be an issue.</p>
+    <img src="./images/mochi.svg" alt="A mochi ball with Bézier handles">
+
+    <h2>Dimensions</h2>
+    <p>Setting only one of the attributes (height or width) will cause the image to scale proportionally, while defining both will stretch the image.</p>
+    <p>The width and height attributes can be useful, but it's usually better to set image dimensions with CSS so you can alter them with media queries.</p>
+
+    <h2>Text alternatives</h2>
+    <p>Adding alt attributes to your <img/> elements is a best practice. <br>
+      It defines a “text alternative” to the image being displayed. <br>
+      This has an impact on both search engines and users with text-only browsers (e.g., people that use text-to-speech software due to a vision impairment).</p>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Links</title>
+  </head>
+  <body>
+    <h1>Links</h1>
+    <p>This particular page is about links! There are three types of links:</p>
+    <ul>
+        <li>Absolute links, like to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla Developer Network</a>, which is a very good resource for web developers.</li>
+        <li>Relative links, like to our <a href="./misc/extras.html">extras page</a>.</li>
+        <!-- This won't work for our local HTML files -->
+        <li>Root-relative links, like to <a href='/'>home page</a> of our website, but those aren't useful to us right now.</li>
+    </ul>
+
+    <!-- The only difference between a root-relative link and a relative one is that the former(root-relative) starts with a forward slash. 
+     That initial forward slash represents the root of your site. 
+     You can add more folders and files to the path after that initial slash, just like relative links. 
+     The following path will work correctly no matter where the current page is located (even in misc/extras.html): 
+
+     /images.html -->
+
+    <!-- Root-relative links are some of the most useful kinds of links. 
+     They’re explicit enough to avoid the potential confusion of relative links, 
+     but they’re not overly explicit like absolute links. 
+     You’ll see a lot of them throughout your web development career, 
+     especially in larger websites where it’s hard to keep track of relative references. -->
+    
+    
+    <p>This example is about links and <a href="./images.html">images</a>.</p>
+  </body>
+</html>

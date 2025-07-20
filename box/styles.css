@@ -12,7 +12,8 @@
     height: 150px;
     width: 150px;
     border: 20px solid #9B51E0;
-    margin: 60px; /*margin defines distance between two elements. Browser takes the largest margin into the account*/
+    margin: 15px auto; /*margin defines distance between two elements. Browser takes the largest margin into the account*/
+    /* using "margin: Npx auto" with defined width allows centering element horizontally */
 }
 
 
@@ -23,5 +24,6 @@
     padding: 20px;
     height: 150px;
     width: 150px;
-    margin: 60px;
+    margin: 120px 150px 160px 120px; /* "margin:" takes up to four values that allow to set margin on different sides top, right, bottom, left  */
+    /* with two or three values it goes: top, right and left, bottom */
 }

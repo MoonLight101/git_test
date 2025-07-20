@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    box-sizing: border-box; /*border-box makes height and width to apply to the whole box, not content size*/
+    /* other setting is content-box that is default */
+}
+
+.box-one {
+    background-color: #EB5757;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+    border: 20px solid #9B51E0;
+    margin: 60px; /*margin defines distance between two elements. Browser takes the largest margin into the account*/
+}
+
+
+.box-two {
+    box-sizing: content-box;
+    background-color: #2D9CD8;
+    border: 20px solid #27AE60;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+    margin: 60px;
+}

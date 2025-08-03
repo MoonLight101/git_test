@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    box-sizing: border-box; /*border-box makes height and width to apply to the whole box, not content size*/
+    /* other setting is content-box that is default */
+}
+
+.box-one {
+    background-color: #EB5757;
+    padding: 20px;
+    height: 150px;
+    max-width: 150px;
+    /* max-width: 150px; defines the biggest width of the given element, that changes dynamically with window resizing that may be useful for mobile, for example */
+    border: 20px solid #9B51E0;
+    margin: 15px auto; /*margin defines distance between two elements. Browser takes the largest margin into the account*/
+    /* using "margin: Npx auto" with defined width allows centering element horizontally */
+    position: relative;
+    left: 400px;
+    bottom: -900px;
+    /* position: relative; with top, right, bottom and left defines new position of the element relative ti its static (default) position */
+}
+
+
+.box-two {
+    box-sizing: content-box;
+    display: inline-block;
+    visibility: hidden;
+    /* display: none; makes item disappear from page entirely
+    visibility: hidden; makes it hidden, but still loaded on the page*/
+    background-color: #2D9CD8;
+    border: 20px solid #27AE60;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+    margin: 120px 150px 160px 120px; /* "margin:" takes up to four values that allow to set margin on different sides top, right, bottom, left  */
+    /* with two or three values it goes: top, right and left, bottom */
+}
+
+.box-three {
+    box-sizing: content-box;
+    display: inline-block; 
+    /* interestingly, inline-block elements does not have collapsable margins, only block margins collapse */
+    background-color: black;
+    color: white;
+    border: 20px solid #9aae27;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+    margin: 120px 150px 160px 120px; /* "margin:" takes up to four values that allow to set margin on different sides top, right, bottom, left  */
+    /* with two or three values it goes: top, right and left, bottom */
+    position: relative;
+    right: -150px;
+}
+
+.box-three-five {
+    font-size: 10px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    /* position: absolute; behaves like fixed but inside another ancestor element that is positioned in any way except "static" */
+}
+
+.box-four {
+    background-color: #181083;
+    padding: 20px;
+    height: 150px;
+    max-width: 150px;
+    /* max-width: 150px; defines the biggest width of the given element, that changes dynamically with window resizing that may be useful for mobile, for example */
+    border: 20px solid #20b2d6;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* position: fixed; is relative to the point of viewpoint and stays in place when scrolling. Used with top, bottom, left and right */
+}

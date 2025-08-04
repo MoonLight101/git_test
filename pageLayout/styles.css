@@ -25,7 +25,7 @@
 .box-two {
     box-sizing: content-box;
     display: inline-block;
-    visibility: hidden;
+    /* visibility: hidden; */
     /* display: none; makes item disappear from page entirely
     visibility: hidden; makes it hidden, but still loaded on the page*/
     background-color: #2D9CD8;
@@ -50,7 +50,7 @@
     margin: 120px 150px 160px 120px; /* "margin:" takes up to four values that allow to set margin on different sides top, right, bottom, left  */
     /* with two or three values it goes: top, right and left, bottom */
     position: relative;
-    right: -150px;
+    /* position: relative;  even without specification (or any other except static) makes this element positioned that allows usage of "position: absolute;" on its child*/
 }
 
 .box-three-five {
@@ -75,4 +75,34 @@
     top: 0px;
     left: 0px;
     /* position: fixed; is relative to the point of viewpoint and stays in place when scrolling. Used with top, bottom, left and right */
+}
+
+.container {
+    margin: 50px;
+    border: 3px solid black;
+    padding: 8px;
+}
+
+.box-five {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    color: white;
+    float: left;
+    /* float is used to wrap text around an image or element, in our case we use <p> and .box-five inside .container to show wrapping */
+}
+
+.box-six {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(38, 0, 173);
+    color: white;
+    float: left;
+    /* float is used to wrap text around an image or element, in our case we use <p> and .box-five inside .container to show wrapping */
+}
+
+.cleared {
+    clear: left;
+    /* clear is user in conjunction with "float" to move element before floated element under it.
+    value of clear is determined by the value of floated element (left, right, both) */
 }

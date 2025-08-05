@@ -106,7 +106,10 @@
 .cleared {
     clear: left;
     /* clear is user in conjunction with "float" to move element before floated element under it.
-    value of clear is determined by the value of floated element (left, right, both) */
+    value of clear is determined by the value of floated element (left, right, both) */ 
+    columns: 3; 
+    /* allows do display text in columns instead of a single block of text */
+    /* columns: is a shorthand for two properties: column-count and column-width */
 }
 
 /* example of a position layout (also responsive with @media */

@@ -32,7 +32,9 @@
     border: 20px solid #27AE60;
     padding: 20px;
     height: 150px;
-    width: 150px;
+    width: 30%;
+    /* width defined with % is dynamic and takes space that is relative to the size of a parent element
+    Can be used for layouts */
     margin: 120px 150px 160px 120px; /* "margin:" takes up to four values that allow to set margin on different sides top, right, bottom, left  */
     /* with two or three values it goes: top, right and left, bottom */
 }
@@ -105,4 +107,91 @@
     clear: left;
     /* clear is user in conjunction with "float" to move element before floated element under it.
     value of clear is determined by the value of floated element (left, right, both) */
+}
+
+/* example of a position layout (also responsive with @media */
+.position-container {
+    position: relative;
+    margin: 50px;
+    border: 3px solid rgb(11, 107, 32);
+    padding: 8px;
+}
+
+.box-seven {
+    background-color: rgb(6, 173, 0);
+    color: rgb(0, 0, 0);
+}
+
+.box-eight {
+    width: 25%;
+    background-color: rgb(170, 173, 0);
+    color: rgb(0, 0, 0);
+}
+
+.position-container footer {
+    position: sticky;
+    /* fixed position is relative to a view point and is taken out of a normal page flow
+    sticky position stays if the flow and relates to the parent element */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181083;
+    color: white;
+    margin-top: 30px;
+}
+
+/* @media is used for responsive design that takes into account external setting of the device used to browse contents of webpages
+Here we query about screen width and apply different styling depending on the result of a query */
+
+@media (min-width: 600px) {
+    /* alternatively: @media (width >= 600px) */
+    .box-seven {
+        position: absolute;
+        left: 0px;
+        width: 25%;
+    }
+    .box-eight{
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 599px) {
+    /* alternatively: @media (width < 600px) */
+    .box-seven {
+        display: inline;
+    }
+}
+
+/* You can create a grid of boxes that fills the browser width and wraps nicely. 
+inline-block elements are like inline elements but they can have a width and height.
+The combine block and inline elements properties.*/
+.inline-box {
+    display: inline-block;
+    border: 2px solid green;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+}
+
+/* page layout could be created with inline-blocks.
+inline-block elements are affected by the vertical-align property, which you probably want set to top.
+You need to set the width of each column
+There will be a gap between the columns if there is any whitespace between them in the HTML */
+.inline-block-container-left, 
+.inline-block-container-right {
+    border: 3px solid red;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.inline-block-container-left {
+    width: 25%;
+}
+
+.inline-block-container-right {
+    width: 74%;
+}
+
+.inline-block-container-right div {
+    margin: 1em;
 }

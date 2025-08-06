@@ -1,0 +1,148 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* When a designer hands you a mockup to implement, your first task is 
+to draw a bunch of boxes on it and determine how they’re supposed to 
+stack, stretch, and shrink to achieve the desired design. Once you’ve 
+got that done, it should be pretty easy to code it up using these new 
+flexbox techniques. */
+
+.menu-container {
+    color: #fff;
+    background-color: #5995DA;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    border: 1px solid #fff;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* from grouping items with auto-margins */
+.signup {
+    margin-left: auto;
+    /* Think of auto-margins as a “divider” for flex items in the same container. */
+    /* Auto-margins eat up all the extra space in a flex container, so instead of 
+    distributing items equally, this moves the .signup and any following items 
+    (.login) to the right side of the container. */
+}
+
+/* from grouping items with additional <div> */
+/* .links {
+    display: flex;
+    justify-content: flex-end;
+} */
+    
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    background-color: #D6E9FE;
+    color: #5995DA;
+}
+
+.header {
+    height: 300px;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe,
+.social {
+    /* align-self is a property applied directly to the flex item */
+    /* values are the same as for align-items property in flex container */
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* default direction inside flexbox is "row", alternative is "column"
+    when you change direction, you also change align-items and justify-content.
+    With rows: align-items is vertical, justify-content is horizontal;
+    With columns: align-items is horizontal, justify-content is vertical */
+    /* also there are reverse directions: "row-reverse" and "column-reverse" */
+    /* flex-direction: row-reverse; */
+    align-items: center;
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+/* many properties in this lesson are applied to the flex containers
+to manipulate flex items */
+/* but some properties like order, flex or align-self are applied directly to flex items */
+
+.first-item {
+    /* The order property is designed to lay the items out in ordinal groups. 
+    This means items are assigned an integer that represents their group. 
+    The items are then placed in the visual order according to that integer, 
+    lowest values first. If more than one item has the same integer value, 
+    then within that group the items are laid out as per source order. */
+    /* default value of order is 0 */
+    order: 1;
+}
+
+.last-item {
+    /* elements are now ordered from the lowest order value of -1 
+    to the highest value of 1 with elements with value of 0 in between*/
+    order: -1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    background-color: #D6E9FE;
+    border: 1px solid #fff;
+    height: 200px;
+    flex: 1;
+    /* The flex property defines the width of individual items 
+    in a flex container. Or, more accurately, it allows them to 
+    have flexible widths. It works as a weight that tells the flex 
+    container how to distribute extra space to each item. For example, 
+    an item with a flex value of 2 will grow twice as fast as items with 
+    the default value of 1. */
+}
+
+.footer-one,
+.footer-three {
+    background-color: #5995DA;
+    flex: initial;
+    /* flex: initial falls back to the item’s explicit width property. */
+    /* Without that flex: initial; line, the flex: 1; declaration would 
+    be inherited from the .footer-item rule, causing the width properties 
+    to be ignored. */
+    /* we get a flexible layout that also contains fixed-width items */
+    width: 300px;
+    /* This is a pretty common layout, and not just in footers, either. 
+    For instance, many websites have a fixed-width sidebar (or multiple 
+    sidebars) and a flexible content block containing the main text of 
+    the page. This is basically a taller version of the footer we just 
+    created. */
+}

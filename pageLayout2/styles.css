@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 5px solid black;
+    height: 800px;
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+    /* justify-content aligns items along the main axis.
+    Default main axis is horizontal with row direction.
+    With column direction main axis becomes vertical */
+    /* space-evenly is another value for justify-content property */
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap allow items inside a container to wrap around a line if there is not enough space on that line */
+    /* flex-wrap: wrap; */
+    /* align-content only works with "flex-wrap:" set to "wrap;" */
+    /* align-content: center; */
+    /* "gap" defines gaps between columns in CSS multi-column layout, between flex items and flex lines in CSS flexible box layout, and between rows and columns in CSS grid layout. */
+    /* gap: 1em; */
+}
+
+.item {
+    border: 5px solid red;
+    background-color: darkred;
+    color: white;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    padding: 50px;
+}
+
+.item-1 {
+     /* determines how fast a given item grow in proportion to others */
+    /* flex-grow: 1; */
+    /* determines how fast a given item shrinks in proportion to others */
+    flex-shrink: 5;
+    /* overrides width of an item */
+    flex-basis: 300px;
+    order: -1;
+}
+
+.item-2 {
+    align-self: flex-end;
+    /* order property changes order of items based on thr order of every individual flex item, default order is 0 */
+    order: 1;
+}
+
+.item-3 {
+    /* is a shorthand for 3 properties mentioned above */
+    flex: 1;
+}
